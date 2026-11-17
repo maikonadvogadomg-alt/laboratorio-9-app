@@ -1,0 +1,51 @@
+{
+  "name": "laboratorio-9",
+  "version": "1.0.0",
+  "description": "laboratorio (9)",
+  "author": "Maikon",
+  "private": true,
+  "main": "electron/main.cjs",
+  "portaDoPrograma": 7852,
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.maikonadvogadomgalt.laboratorio9.pc",
+    "productName": "laboratorio (9)",
+    "executableName": "laboratorio-9",
+    "directories": {
+      "output": "release"
+    },
+    "asar": false,
+    "files": [
+      "**/*",
+      "!android/**",
+      "!.github/**",
+      "!release/**",
+      "!exe/**",
+      "!node_modules/.cache/**",
+      "!*.zip",
+      "!.sk/**",
+      "!apk.config.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icons/icon-512.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "laboratorio (9)",
+      "artifactName": "laboratorio-9-Instalar.exe"
+    },
+    "portable": {
+      "artifactName": "laboratorio-9-sem-instalar.exe"
+    }
+  }
+}
